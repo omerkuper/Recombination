@@ -13,7 +13,7 @@ class recombination:
         self.data_seq = matrix_db
         self.x = 2 if self.flt_pt == 0 else 1
 
-    def look(self, count, inx=None):
+    def look(self, count=0, inx=None):
         inx, counter = inx, count
         if counter <= self.k_mer - self.x:
             if counter < self.k_mer - 1:
@@ -28,7 +28,7 @@ class recombination:
 
 k_mer = 10
 run = recombination(k_mer)
-result = run.look(0, )
+result = run.look()
 print(result)
 print(len(result))
 
